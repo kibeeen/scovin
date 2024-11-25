@@ -1,0 +1,277 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+/* GLOBAL CSS */
+
+a {
+    color: #FFF;
+}
+
+body {
+    margin: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+/* NOTIFICATIONS */
+
+#notifications {
+    font-family: 'Courier Prime';
+    font-size: 14px;
+    color: #FFF;
+    background-color: #595959;
+    opacity: 1;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ------------------------------------------------------------ *\
+	HEADER
+\* ------------------------------------------------------------ */
+
+#header {
+    border-bottom: 1px solid #ebebeb;
+    height: 80px;
+}
+
+.header-inner,
+.nav-search {
+    position: relative;
+    float: left;
+}
+
+.logo {
+    background: url("./images/scovin-logo-black.png") 0 0 / contain no-repeat;
+    float: left;
+    width: 147px;
+    height: 43px;
+    margin: 18px 15px 0 20px;
+}
+
+
+
+.header-right {
+    position: relative;
+    float: right;
+}
+
+.header-inner {
+    width: calc(100% - 307px);
+    height: 80px;
+    border-left: 1px solid #ebebeb;
+}
+
+.header-actions {
+    display: inline-flex;
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.nav-search {
+    position: relative;
+    flex: 1 1 auto;
+    height: 42px;
+}
+
+.nav-search .nav-search-btn {
+    position: absolute;
+    background: transparent;
+    border: 0;
+    left: 15px;
+    top: 15px;
+    width: 30px;
+}
+
+.nav-search .search-clear-btn {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    height: 36px;
+    border: 0;
+    width: 30px;
+    background: transparent;
+}
+
+.nav-search-field {
+    padding: 15px 0px 0px 20px;
+    border: 0;
+    font-family: 'Courier Prime';
+    transition: all .3s;
+    font-size: 14px;
+    width: 100%;
+}
+
+.nav-search-field::placeholder {
+    color: #B2B2B2;
+    font-weight: 300;
+}
+
+.nav-search-field:focus {
+    outline: none;
+    border-color: initial;
+}
+
+
+
+
+
+.ico-search-dark {
+    background: url("./images/ico-search-dark.png") no-repeat center / contain;
+    width: 13px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    border: 0;
+}
+
+.ico-close {
+    background: url("./images/ico-close.png") no-repeat 0 0;
+    width: 13px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    border: 0;
+}
+
+.ico-envelope {
+    background: url("./images/ico-envelope.png") no-repeat 0 0;
+    width: 16px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+.ico-account {
+    background: url("./images/ico-account.png") no-repeat 0 0;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+.header-actions .newsletter-signup a,
+.header-actions .login-link-icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 13px;
+    min-width: 42px;
+    height: 100%;
+    padding: 0 13px;
+    border-left: 1px solid #ebebeb;
+}
+
+#header .shopping-bag {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 80px;
+    border-left: 1px solid #ebebeb;
+}
+
+
+
+@media (min-width: 1023px) {
+    .nav-search .nav-search-btn {
+        right: auto;
+        left: 0;
+        top: 0;
+        height: 41px;
+    }
+
+    .nav-search .search-clear-btn {
+        left: auto;
+        right: 0;
+        top: 0;
+        height: 41px;
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+    .header .nav-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: static;
+        top: initial;
+        left: initial;
+        margin-left: 0;
+        width: calc(100% - 125px);
+        height: 37px;
+        transform: none;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .nav-search {
+        padding-left: 38px;
+    }
+
+    .nav-search .nav-search-btn {
+        left: 13px;
+    }
+
+    .nav-search .search-clear-btn {
+        right: 13px;
+    }
+}
+
+
+
+
+/* ------------------------------------------------------------ *\
+	NAV-BAR
+\* ------------------------------------------------------------ */
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 37px;
+    font-weight: bold;
+}
+
+.nav-bar a {
+    text-decoration: unset;
+    color: #333;
+}
+
+.nav-bar ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.nav-bar ul li {
+    display: inline;
+    margin: 0 5px;
+}
