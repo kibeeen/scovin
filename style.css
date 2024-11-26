@@ -376,6 +376,10 @@ body {
     border-bottom: 2.5px solid #333;
 }
 
+.nav-search-btn-mobile {
+    display: none;
+}
+
 
 /* ------------------------------------------------------------ *\
 	CAROUSEL
@@ -512,15 +516,65 @@ body {
     .logo {
         background-position: center;
     }
+
+
 }
 
 @media (max-width: 767px) {
 
     #notifications {
-        font-size: 11px;
+        font-size: 10px;
         height: 40px;
         text-align: center;
         padding: 0 20px;
     }
+
+    .header-actions .login-link-icon a,
+    .btn-menu,
+    #header,
+    .header-inner,
+    #header .shopping-bag {
+        height: 50px;
+    }
+
+    .header-actions {
+        border-bottom: unset;
+    }
+
+    .logo {
+        background-size: 120px;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    .header-inner {
+        display: none;
+    }
+
+    #header .shopping-bag {
+        justify-content: end;
+        align-items: center;
+        width: 50px;
+        border-left: unset;
+    }
+
+    #header .btn-menu {
+        width: 50px;
+        border-right: unset;
+    }
+
+    .nav-search-btn-mobile {
+        display: block;
+        border: 0;
+        background: transparent;
+    }
+
+    .nav-search-btn-mobile .ico-search-dark {
+        width: 15px;
+        height: 15px;
+    }
+
+
+
 
 }
