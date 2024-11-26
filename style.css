@@ -566,7 +566,7 @@ body {
     .nav-search-btn-mobile {
         display: block;
         border: 0;
-        background: transparent;
+        background: transparent !important;
     }
 
     .nav-search-btn-mobile .ico-search-dark {
