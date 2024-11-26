@@ -1,8 +1,11 @@
+// Initial adjustment when the page loads
+adjustLogoWidth();
+
+
 // Adjust the logo width when the window is resized
 window.addEventListener('resize', adjustLogoWidth);
 
-// Initial adjustment when the page loads
-adjustLogoWidth();
+
 
 // Function to adjust the logo width based on the current window width
 function adjustLogoWidth() {
@@ -19,7 +22,7 @@ function adjustLogoWidth() {
         const adjustedWidth = Math.min(Math.max(logoWidth, 100), 300);
 
         // Apply the width to the logo
-        logo.style.width = `${windowWidth - 145}px`;
+        logo.style.width = `${windowWidth - 150}px`;
         
 
     } else if(windowWidth <= 1023) {
