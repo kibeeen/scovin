@@ -16,7 +16,7 @@ function adjustLogoWidth() {
     
     const windowWidth = window.innerWidth;
 
-    nav_expand_section.style.width = `${windowWidth}px`;
+    nav_expand_section.style.width = `${windowWidth-19}px`;
 
     if (windowWidth <= 767) {
         
