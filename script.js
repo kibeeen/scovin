@@ -22,7 +22,7 @@ function adjustLogoWidth() {
         const adjustedWidth = Math.min(Math.max(logoWidth, 100), 300);
 
         // Apply the width to the logo
-        logo.style.width = `${windowWidth - 150}px`;
+        logo.style.width = `${windowWidth - 155}px`;
         
 
     } else if(windowWidth <= 1023) {
