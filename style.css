@@ -101,6 +101,7 @@ a {
 body {
     margin: 0;
     font-size: 12px;
+    position: relative;
 }
 
 .hidden {
@@ -137,6 +138,7 @@ body {
 #header {
     border-bottom: 1px solid #ebebeb;
     height: 80px;
+    position: relative;
 }
 
 .header-inner,
@@ -378,6 +380,19 @@ body {
 
 .nav-search-btn-mobile {
     display: none;
+}
+
+.nav-bar .nav-expand-section {
+    background: #333;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    height: 350px;
+    visibility: visible;
+    transition: all .1s;
+    top: 80px;
+    left: -183px;
 }
 
 
