@@ -511,8 +511,7 @@ body {
     padding: 3px 6px 6px;
     border-top: 1px solid rgba(38, 38, 38, .15);
     border-bottom: 1px solid rgba(38, 38, 38, .15);
-    opacity: .35;
-    transition: opacity .3s;
+    transition: opacity .15s;
 }
 
 .item p {
@@ -528,8 +527,8 @@ body {
     max-width: 212px;
     padding: 3px 6px;
     margin-bottom: 10px;
-    opacity: .35;
-    transition: opacity .3s;
+    /* opacity: .35; */
+    transition: opacity .15s;
 }
 
 
@@ -542,7 +541,7 @@ body {
     opacity: 0;
     transition: all .3s;
     text-decoration: underline;
-    transition: opacity .3s;
+    transition: opacity .15s;
 }
 
 #owl-demo .actions a {
