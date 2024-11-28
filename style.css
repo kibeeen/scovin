@@ -653,8 +653,12 @@ html {
 }
 
 /* Hover effect to move the text up */
-.menu-panel:hover .panel-content {
+.menu-panel:hover .panel-content   {
     top: 68.5%;
+    opacity: 1 !important;
+}
+
+.menu-panel:hover .panel-heading {
     opacity: 1 !important;
 }
 
@@ -692,21 +696,6 @@ html {
     transform: scale(1.1); /* Add zoom effect */
     opacity: 1; /* Make it more prominent */
     transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Dim unfocused panels */
-.owl-item:not(.center) .menu-panel {
-    opacity: 0.6;
-}
-
-/* Adjust carousel spacing */
-.owl-carousel .owl-item {
-    text-align: center;
-    margin: 5px;
-}
-
-.menu-panel {
-    cursor: pointer;
 }
 
 
