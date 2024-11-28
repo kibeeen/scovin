@@ -637,6 +637,11 @@ html {
     cursor: pointer;
 }
 
+.item-wrapper {
+    position: relative;
+    text-decoration: none;
+}
+
 /* Panel content container */
 .panel-content {
     position: absolute;
