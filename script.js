@@ -1,3 +1,5 @@
+$(".owl-wrapper").addClass("display-flex");
+
 // Initial adjustment when the page loads
 adjustLogoWidth();
 
@@ -31,6 +33,14 @@ function adjustLogoWidth() {
         logo.style.width = `${windowWidth - 312}px`;
         nav_expand_section.style.width = `${windowWidth}px`;
 
+    } else if (windowWidth <= 1024) {
+
+
+    } else if (windowWidth <= 1256) {
+
+        $(".owl-wrapper").addClass("display-flex");
+
+
     } else {
         logo.style.width = '';
     }
@@ -43,12 +53,16 @@ $(document).ready(function () {
 
     // Owl Carousel initialization
     $("#owl-demo").owlCarousel({
-        items: 6,
+        items: 4,
         slideSpeed: 300,
-        pagination: false,
+        pagination: true,
         loop: true,
+        dots: true,
         responsiveRefreshRate: 100,
-        navigation: false
+        navigation: false,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: true
     });
 
     // Ensure Panel 0 (index 0) loads its video and is active on page load
@@ -63,14 +77,9 @@ $(document).ready(function () {
         imageElement.attr("src", defaultFile).show();
     }
 
-    // Ensure that the first panel's content is pushed up on load (initial hover state)
-    // defaultPanel.find('.panel-content').css('bottom', '85px');
 
-    // Hover effect: Ignore panels 1 and 6
     $(".menu-panel").hover(
         function () {
-            if ($(this).hasClass("disabled")) return; // Skip hover for disabled panels
-
             const fileType = $(this).data("type");
             const fileSource = $(this).data("file");
 
@@ -93,17 +102,31 @@ $(document).ready(function () {
                 }, 0);
             }
 
-            // Move the text of the hovered panel up
+            // Show the CTA for this specific panel
+            $(this).find(".actions").css({
+                opacity: 1,
+                visibility: "visible",
+            });
+
+            // Optionally, you can move the text of the hovered panel up
             // $(this).find('.panel-content').css('bottom', '160px');
+        },
+        function () {
+            if ($(this).hasClass("disabled")) return; // Skip hover for disabled panels
+
+            // Hide the CTA for this specific panel
+            $(this).find(".actions").css({
+                opacity: 0,
+                visibility: "hidden",
+            });
+
+            // Optionally reset the text position when hover ends
+            // $(this).find('.panel-content').css('bottom', 'initial');
         }
-
     );
-
-    // Disable hover actions for panels 1 and 6
-    $(".item").eq(0).addClass("disabled");
-    $(".item").eq(5).addClass("disabled");
 
     // Trigger hover effect on the first panel (Panel 1) to load its video
     defaultPanel.trigger("mouseenter");
 });
+
 
