@@ -930,20 +930,33 @@ html {
 }
 
 
-@media (max-width: 479px) {
+@media (max-width: 480px) {
 
     .item .actions {
         display: none;
         ;
     }
 
-    .panel-content,
+    .panel-content {
+        opacity: .95;
+    }
+    
     .panel-description {
-        opacity: 1;
+        opacity: 0.8;
+    }
+
+
+    .menu-panel:hover .panel-content {
+        top: 75%;
     }
 
     .menu-panel .panel-content {
         top: 75%;
+    }
+
+    .owl-theme .owl-nav.disabled+.owl-dots {
+        position: absolute;
+        top: 0;
     }
 }
 
