@@ -130,7 +130,8 @@ html {
 
 
 .clear {
-    clear: both; /* Ensures no floating elements affect this element */
+    clear: both;
+    /* Ensures no floating elements affect this element */
 }
 
 
@@ -1123,7 +1124,17 @@ html {
         position: absolute;
         top: 0;
     }
+
+    .carousel-slider .slider-item a {
+        margin-bottom: 130px;
+    }
+
+    #owl-demo-mobile .owl-dots {
+        bottom: 200px;
+    }
 }
+
+
 
 @media (max-width: 430px) {
 
@@ -1135,6 +1146,7 @@ html {
         margin-left: 8px;
         margin-right: unset;
     }
+
 
 
 
