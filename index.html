@@ -293,277 +293,58 @@
     <main>
 
         <!-- CAROUSEL SLIDER -->
-        <div>
-            <style>
-                body,
-                html {
-                    margin: 0;
-                    padding: 0;
-                    width: 100%;
-                    height: 100%;
-                    overflow: hidden;
-                }
-
-                .carousel-container {
-                    position: relative;
-                    width: 100%;
-                    height: 100vh;
-                    overflow: hidden;
-                }
-
-                #background-media-container {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 0;
-                }
-
-                #background-video,
-                #background-image {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    transition: opacity 0.3s ease-in-out;
-                    /* Cross-fade effect */
-                    opacity: 1;
-                }
-
-                .background-overlay {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: white;
-                    opacity: 0;
-                    pointer-events: none;
-                    transition: opacity 0.3s ease;
-                    z-index: 1;
-                }
-
-                .owl-carousel .item {
-                    height: 100vh;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 2rem;
-                    font-weight: bold;
-                    color: #fff;
-                    cursor: pointer;
-                    z-index: 2;
-                    border-left: 1px solid #26262626;
-                }
-
-                .menu-panel:nth-child(2) {
-                    background: rgba(0, 0, 0, 0.8);
-                }
-
-                .menu-panel:nth-child(3) {
-                    background: rgba(50, 50, 150, 0.8);
-                }
-
-                .menu-panel:nth-child(4) {
-                    background: rgba(150, 50, 50, 0.8);
-                }
-
-                .menu-panel:nth-child(5) {
-                    background: rgba(50, 150, 50, 0.8);
-                }
-
-                .menu-panel {
-                    position: relative;
-                    overflow: hidden;
-                    cursor: pointer;
-                }
-
-                /* Panel content container */
-                .panel-content {
-                    position: absolute;
-                    top: 72%;
-                    left: 0;
-                    width: 100%;
-                    text-align: center;
-                    transition: top 0.4s ease;
-                    opacity: 0.3;
-                    z-index: 1;
-                    padding: 10px;
-                    padding: 0 0 25px;
-                    /* transition: opacity .3s; */
-                }
-
-                /* Hover effect to move the text up */
-                .menu-panel:hover .panel-content {
-                    top: 67.5%;
-                    opacity: 1 !important;
-                }
-
-                /* Content styles */
-                .panel-heading {
-                    font-size: 1.5rem;
-                    margin: 0;
-                    color: white;
-                }
-
-                .panel-description {
-                    font-size: 1rem;
-                    margin: 5px 0;
-                    color: white;
-                    text-align: center;
-                    display: -webkit-box;
-                    /* Required for line clamping */
-                    -webkit-box-orient: vertical;
-                    /* Required for line clamping */
-                    overflow: hidden;
-                    /* Hide overflowed text */
-                    -webkit-line-clamp: 3;
-                    /* Limit to 3 lines */
-                    line-height: 1.5;
-                    /* Adjust line height for proper spacing */
-                    max-height: calc(1.5em * 3);
-                    /* Ensure the height matches 3 lines of text */
-                }
-
-                .panel-cta {
-                    font-size: 1rem;
-                    text-decoration: underline;
-                    color: white;
-                    cursor: pointer;
-                }
-            </style>
-
-
-
-            <div class="carousel-container">
-                <div id="background-media-container">
-                    <video id="background-video" autoplay muted loop></video>
-                    <img id="background-image" alt="Background Image" style="display: none;">
-                </div>
-                <div id="owl-demo" class="owl-carousel owl-theme">
-                    <!-- Empty Panels -->
-                    <div class="item"></div>
-                    <div class="item menu-panel" data-type="video" data-file="./images/slider/bg1.mp4">
-                        <div class="panel-content">
-                            <h2 class="panel-heading">FINE FRAGRANCES</h2>
-                            <p class="panel-description">prepared in our labs, discovered on your skin, where you are...
-                            </p>
-                            <div class="actions">
-                                <a href="#" class="panel-cta">View more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item menu-panel" data-type="image" data-file="./images/slider/bg2.jpg">
-                        <div class="panel-content">
-                            <h2 class="panel-heading">Panel 2</h2>
-                            <p class="panel-description">Introducing our new creation...</p>
-                            <div class="actions">
-                                <a href="#" class="panel-cta">View more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item menu-panel" data-type="video" data-file="./images/slider/bg4.mp4">
-                        <div class="panel-content">
-                            <h2 class="panel-heading">Panel 3</h2>
-                            <p class="panel-description">modern textures with a retro feel</p>
-                            <div class="actions">
-                                <a href="#" class="panel-cta">View more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item menu-panel" data-type="image" data-file="./images/slider/bg3.jpg">
-                        <div class="panel-content">
-                            <h2 class="panel-heading">Panel 4</h2>
-                            <p class="panel-description">gifts for everyone...</p>
-                            <div class="actions">
-                                <a href="#" class="panel-cta">View more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item"></div>
-                </div>
+        <div class="carousel-container">
+            <div id="background-media-container">
+                <video id="background-video" autoplay muted loop></video>
+                <img id="background-image" alt="Background Image" style="display: none;">
             </div>
+            <div id="owl-demo" class="owl-carousel owl-theme">
+                <!-- Empty Panels -->
+                <div class="item"></div>
+                <div class="item menu-panel" data-type="video" data-file="./images/slider/bg1.mp4">
+                    <div class="panel-content">
+                        <h2 class="panel-heading">FINE FRAGRANCES</h2>
+                        <p class="panel-description">prepared in our labs, discovered on your skin, where you are...
+                        </p>
+                        <div class="actions">
+                            <a href="#" class="panel-cta">View more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item menu-panel" data-type="image" data-file="./images/slider/bg2.jpg">
+                    <div class="panel-content">
+                        <h2 class="panel-heading">Panel 2</h2>
+                        <p class="panel-description">Introducing our new creation...</p>
+                        <div class="actions">
+                            <a href="#" class="panel-cta">View more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item menu-panel" data-type="video" data-file="./images/slider/bg4.mp4">
+                    <div class="panel-content">
+                        <h2 class="panel-heading">Panel 3</h2>
+                        <p class="panel-description">modern textures with a retro feel</p>
+                        <div class="actions">
+                            <a href="#" class="panel-cta">View more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item menu-panel" data-type="image" data-file="./images/slider/bg3.jpg">
+                    <div class="panel-content">
+                        <h2 class="panel-heading">Panel 4</h2>
+                        <p class="panel-description">gifts for everyone...</p>
+                        <div class="actions">
+                            <a href="#" class="panel-cta">View more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item"></div>
+            </div>
+        </div>
 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
 
-
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-            <script>
-                $(document).ready(function () {
-                    const videoElement = $("#background-video");
-                    const imageElement = $("#background-image");
-
-                    // Owl Carousel initialization
-                    $("#owl-demo").owlCarousel({
-                        items: 6,
-                        slideSpeed: 300,
-                        pagination: false,
-                        loop: true,
-                        responsiveRefreshRate: 100,
-                        navigation: false
-                    });
-
-                    // Ensure Panel 0 (index 0) loads its video and is active on page load
-                    const defaultPanel = $(".menu-panel").eq(0); // Panel 0 corresponds to index 0 (0-based)
-                    const defaultType = defaultPanel.data("type");
-                    const defaultFile = defaultPanel.data("file");
-
-                    if (defaultType === "video") {
-                        videoElement.attr("src", defaultFile).show();
-                        videoElement[0].play();
-                    } else if (defaultType === "image") {
-                        imageElement.attr("src", defaultFile).show();
-                    }
-
-                    // Ensure that the first panel's content is pushed up on load (initial hover state)
-                    // defaultPanel.find('.panel-content').css('bottom', '85px');
-
-                    // Hover effect: Ignore panels 1 and 6
-                    $(".menu-panel").hover(
-                        function () {
-                            if ($(this).hasClass("disabled")) return; // Skip hover for disabled panels
-
-                            const fileType = $(this).data("type");
-                            const fileSource = $(this).data("file");
-
-                            // Handle panel hover effect for cross-fade
-                            if (fileType === "video") {
-                                imageElement.addClass("fade-out");
-                                setTimeout(() => {
-                                    imageElement.hide();
-                                    videoElement.show().attr("src", fileSource);
-                                    videoElement[0].load();
-                                    videoElement[0].play();
-                                    imageElement.removeClass("fade-out");
-                                }, 0);
-                            } else if (fileType === "image") {
-                                videoElement.addClass("fade-out");
-                                setTimeout(() => {
-                                    videoElement.hide();
-                                    imageElement.show().attr("src", fileSource);
-                                    imageElement.removeClass("fade-out");
-                                }, 0);
-                            }
-
-                            // Move the text of the hovered panel up
-                            // $(this).find('.panel-content').css('bottom', '160px');
-                        }
-
-                    );
-
-                    // Disable hover actions for panels 1 and 6
-                    $(".item").eq(0).addClass("disabled");
-                    $(".item").eq(5).addClass("disabled");
-
-                    // Trigger hover effect on the first panel (Panel 1) to load its video
-                    defaultPanel.trigger("mouseenter");
-                });
-
-            </script>
-            <!-- <img src="./images/slider/bg2.jpg"> -->
         </div>
 
 
