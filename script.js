@@ -59,9 +59,9 @@ $(document).ready(function () {
     // Owl Carousel initialization
     $("#owl-demo").owlCarousel({
         items: 4,
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout: 5000,
-        loop: true,
+        loop: false,
         autoplayHoverPause: true,
         dots: true,
         responsive: {
