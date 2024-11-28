@@ -152,7 +152,7 @@ $(document).ready(function () {
         $("#owl-demo-mobile").owlCarousel({
             items: 1,
             dots: true,
-            autoplay: true,
+            autoplay: false,
             loop: true,
             video: true,
         });

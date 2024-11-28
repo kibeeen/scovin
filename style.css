@@ -113,7 +113,7 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .hidden {
@@ -129,6 +129,9 @@ html {
 }
 
 
+.clear {
+    clear: both; /* Ensures no floating elements affect this element */
+}
 
 
 
@@ -572,7 +575,7 @@ html {
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -698,6 +701,7 @@ html {
 
 #carousel-mobile {
     position: relative;
+    display: none;
 }
 
 #carousel-mobile .carousel-slider {
@@ -719,7 +723,7 @@ html {
     justify-content: end;
     text-decoration: unset;
     color: inherit;
-    height: 100vh;
+    height: 100%;
     margin-bottom: 50px;
 }
 
@@ -735,13 +739,13 @@ html {
 #owl-demo-mobile .slider-inner {
     position: relative;
     z-index: 9;
-    width: 65%;
+    width: 70%;
 }
 
 #owl-demo-mobile .slider-background video {
     position: absolute;
     top: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     z-index: 1;
@@ -752,7 +756,7 @@ html {
 #owl-demo-mobile .slider-background img {
     position: absolute;
     top: 0;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     z-index: 1;
@@ -762,6 +766,7 @@ html {
 
 #owl-demo-mobile .slider-inner {
     padding: 0 2em;
+    position: relative;
 }
 
 #owl-demo-mobile .slider-inner h2 {
@@ -809,6 +814,14 @@ html {
 
 
 
+/* ------------------------------------------------------------ *\
+	FOOTER
+\* ------------------------------------------------------------ */
+
+#footer {
+    position: relative;
+    height: 500px;
+}
 
 
 
@@ -1040,7 +1053,7 @@ html {
     #header .shopping-bag {
         justify-content: end;
         align-items: center;
-        width: 50px;
+        width: 40px;
         border-left: unset;
     }
 
