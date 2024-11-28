@@ -190,7 +190,7 @@ $(document).ready(function () {
         items: 1,
         dots: true,
         autoplay: true,
-        autoplayTimeout: 10000,
+        autoplayTimeout: 8000,
         loop: true,
         video: true,
     });
