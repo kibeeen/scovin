@@ -20,8 +20,11 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- OWL CAROUSEL -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
 
 
 </head>
@@ -288,62 +291,94 @@
     <!-- MAIN BODY -->
     <main>
 
-        <!-- CAROUSEL SLIDER -->
-        <div class="carousel-wrapper">
+        <!-- CAROUSEL DESTKOP SLIDER -->
+        <div id="carousel-desktop">
             <div class="carousel-container">
-                <div class="carousel-inner-wrapper">
-                    <div id="background-media-container">
-                        <video id="background-video" autoplay muted loop></video>
-                        <img id="background-image" alt="Background Image" style="display: none;">
+                <div class="carousel-wrapper">
+                    <div class="carousel-inner-wrapper">
+                        <div id="background-media-container">
+                            <video id="background-video" autoplay muted loop></video>
+                            <img id="background-image" alt="Background Image" style="display: none;">
+                        </div>
+                        <div id="owl-demo" class="owl-carousel owl-theme">
+                            <!-- Empty Panels -->
+                            <div class="item menu-panel" data-type="video" data-file="./images/slider/bg1.mp4">
+                                <div class="panel-content">
+                                    <h2 class="panel-heading">FINE FRAGRANCES</h2>
+                                    <p class="panel-description">prepared in our labs, discovered on your skin, where
+                                        you
+                                        are...
+                                    </p>
+                                    <div class="actions">
+                                        <a href="#" class="panel-cta">View more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item menu-panel" data-type="image" data-file="./images/slider/bg2.jpg">
+                                <div class="panel-content">
+                                    <h2 class="panel-heading">Panel 2</h2>
+                                    <p class="panel-description">Introducing our new creation...</p>
+                                    <div class="actions">
+                                        <a href="#" class="panel-cta">View more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item menu-panel" data-type="video" data-file="./images/slider/bg4.mp4">
+                                <div class="panel-content">
+                                    <h2 class="panel-heading">Panel 3</h2>
+                                    <p class="panel-description">modern textures with a retro feel</p>
+                                    <div class="actions">
+                                        <a href="#" class="panel-cta">View more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item menu-panel" data-type="image" data-file="./images/slider/bg3.jpg">
+                                <div class="panel-content">
+                                    <h2 class="panel-heading">Panel 4</h2>
+                                    <p class="panel-description">gifts for everyone...</p>
+                                    <div class="actions">
+                                        <a href="#" class="panel-cta">View more</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                    <div id="owl-demo" class="owl-carousel owl-theme">
-                        <!-- Empty Panels -->
-                        <div class="item menu-panel" data-type="video" data-file="./images/slider/bg1.mp4">
-                            <div class="panel-content">
-                                <h2 class="panel-heading">FINE FRAGRANCES</h2>
-                                <p class="panel-description">prepared in our labs, discovered on your skin, where you are...
-                                </p>
-                                <div class="actions">
-                                    <a href="#" class="panel-cta">View more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item menu-panel" data-type="image" data-file="./images/slider/bg2.jpg">
-                            <div class="panel-content">
-                                <h2 class="panel-heading">Panel 2</h2>
-                                <p class="panel-description">Introducing our new creation...</p>
-                                <div class="actions">
-                                    <a href="#" class="panel-cta">View more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item menu-panel" data-type="video" data-file="./images/slider/bg4.mp4">
-                            <div class="panel-content">
-                                <h2 class="panel-heading">Panel 3</h2>
-                                <p class="panel-description">modern textures with a retro feel</p>
-                                <div class="actions">
-                                    <a href="#" class="panel-cta">View more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item menu-panel" data-type="image" data-file="./images/slider/bg3.jpg">
-                            <div class="panel-content">
-                                <h2 class="panel-heading">Panel 4</h2>
-                                <p class="panel-description">gifts for everyone...</p>
-                                <div class="actions">
-                                    <a href="#" class="panel-cta">View more</a>
-                                </div>
-                            </div>
-                        </div>
-    
-                    </div>
+
                 </div>
-                
             </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+        <!-- CAROUSEL MOBILE SLIDER -->
+        <!-- <div id="carousel-mobile">
+
+            <div id="owl-carousel-mobile" class="owl-carousel owl-theme">
+
+                <div class="item-video" data-merge="3"><a class="owl-video" href="https://vimeo.com/23924346"></a>
+                </div>
+                <div class="item-video" data-merge="1"><a class="owl-video"
+                        href="https://www.youtube.com/watch?v=JpxsRwnRwCQ"></a></div>
+                <div class="item-video" data-merge="2"><a class="owl-video"
+                        href="https://www.youtube.com/watch?v=FBu_jxT1PkA"></a></div>
+                <div class="item-video" data-merge="1"><a class="owl-video"
+                        href="https://www.youtube.com/watch?v=oy18DJwy5lI"></a></div>
+                <div class="item-video" data-merge="2"><a class="owl-video"
+                        href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div>
+                <div class="item-video" data-merge="3"><a class="owl-video"
+                        href="https://www.youtube.com/watch?v=g3J4VxWIM6s"></a></div>
+                <div class="item-video" data-merge="1"><a class="owl-video"
+                        href="https://www.youtube.com/watch?v=0fhoIate4qI"></a></div>
+                <div class="item-video" data-merge="2"><a class="owl-video"
+                        href="https://www.youtube.com/watch?v=EF_kj2ojZaE"></a></div>
+
+            </div>
+
+
+        </div> -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
         </div>
 

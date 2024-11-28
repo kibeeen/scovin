@@ -1,5 +1,11 @@
 $(".owl-wrapper").addClass("display-flex");
 
+
+
+
+
+
+
 // Initial adjustment when the page loads
 adjustLogoWidth();
 
@@ -54,15 +60,21 @@ $(document).ready(function () {
     // Owl Carousel initialization
     $("#owl-demo").owlCarousel({
         items: 4,
-        slideSpeed: 300,
-        pagination: true,
-        loop: true,
         dots: true,
-        responsiveRefreshRate: 100,
-        navigation: false,
-        autoplay: true,
-        autoplayTimeout: 1000,
-        autoplayHoverPause: true
+        responsive:{
+            0:{
+                items:1
+            },
+            480:{
+                items:2
+            },
+            1024:{
+                items:4
+            },
+            2440:{
+                items:4
+            }
+        }
     });
 
     // Ensure Panel 0 (index 0) loads its video and is active on page load
@@ -127,6 +139,22 @@ $(document).ready(function () {
 
     // Trigger hover effect on the first panel (Panel 1) to load its video
     defaultPanel.trigger("mouseenter");
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
+
+
+
 
 
