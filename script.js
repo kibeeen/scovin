@@ -23,7 +23,7 @@ function adjustLogoWidth() {
 
     const windowWidth = window.innerWidth;
 
-    nav_expand_section.style.width = `${windowWidth - 19}px`;
+    nav_expand_section.style.width = `${windowWidth}px`;
 
     if (windowWidth <= 767) {
 
@@ -80,7 +80,7 @@ $(document).ready(function () {
         }
     });
 
-  
+
 
     // Ensure Panel 0 (index 0) loads its video and is active on page load
     const defaultPanel = $(".menu-panel").eq(0); // Panel 0 corresponds to index 0 (0-based)
@@ -148,13 +148,22 @@ $(document).ready(function () {
 
 
 
+    $(document).ready(function () {
+        $("#owl-demo-mobile").owlCarousel({
+            items: 1,
+            dots: true,
+            autoplay: true,
+            loop: true,
+            video: true,
+        });
+    });
 
 
+    // Listen to owl events
 
 
-
-
-
+    // Trigger the initial background setup
+    owl.trigger('changed.owl.carousel', { item: { index: 0 } });
 
 
 });
@@ -162,4 +171,19 @@ $(document).ready(function () {
 
 
 
+// $(document).ready(function () {
+//     $(document).ready(function () {
+//         var owl = $('.owl-carousel');
+//         owl.owlCarousel({
+//             items: 1,
+//             loop: true,
+//             autoplay: false,
+//             nav: true,
+//             navText: ["<", ">"],
+//             dots: true,
+//         });
 
+//
+//     });
+
+// });

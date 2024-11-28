@@ -512,8 +512,6 @@ html {
 	CAROUSEL
 \* ------------------------------------------------------------ */
 
-
-
 .item .panel-heading {
     font-family: 'AfacadFlux';
     font-size: 26px;
@@ -601,7 +599,6 @@ html {
     height: 100%;
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
-    /* Cross-fade effect */
     opacity: 1;
 }
 
@@ -639,7 +636,6 @@ html {
 
 
 
-/* Panel content container */
 .panel-content {
     position: absolute;
     top: 73.5%;
@@ -651,10 +647,8 @@ html {
     z-index: 1;
     padding: 10px;
     padding: 0 0 25px;
-    /* transition: opacity .3s; */
 }
 
-/* Hover effect to move the text up */
 .menu-panel:hover .panel-content {
     top: 68.5%;
     opacity: 1 !important;
@@ -664,7 +658,6 @@ html {
     opacity: 1 !important;
 }
 
-/* Content styles */
 .panel-heading {
     font-size: 1.5rem;
     margin: 0;
@@ -680,11 +673,8 @@ html {
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 3;
-    /* Limit to 3 lines */
     line-height: 1.5;
-    /* Adjust line height for proper spacing */
     max-height: calc(1.5em * 3);
-    /* Ensure the height matches 3 lines of text */
 }
 
 .panel-cta {
@@ -696,11 +686,151 @@ html {
 
 .menu-panel.focused {
     transform: scale(1.1);
-    /* Add zoom effect */
     opacity: 1;
-    /* Make it more prominent */
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+
+
+/* ------------------------------------------------------------ *\
+	CAROUSEL MOBILE
+\* ------------------------------------------------------------ */
+
+#carousel-mobile {
+    position: relative;
+}
+
+#carousel-mobile .carousel-slider {
+    height: 100vh;
+    width: 100%;
+}
+
+.carousel-slider .slider-item {
+    display: flex;
+    justify-content: flex-end;
+    height: calc(100vh - 110px);
+    flex-direction: column;
+}
+
+.carousel-slider .slider-item a {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    justify-content: end;
+    text-decoration: unset;
+    color: inherit;
+    height: 100vh;
+    margin-bottom: 50px;
+}
+
+#owl-demo-mobile .owl-dots {
+    position: absolute;
+    top: unset;
+    bottom: 140px;
+    padding: 0 2em;
+    margin-top: 0;
+    display: flex;
+}
+
+#owl-demo-mobile .slider-inner {
+    position: relative;
+    z-index: 9;
+    width: 65%;
+}
+
+#owl-demo-mobile .slider-background video {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#owl-demo-mobile .slider-background img {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#owl-demo-mobile .slider-inner {
+    padding: 0 2em;
+}
+
+#owl-demo-mobile .slider-inner h2 {
+    font-family: 'AfacadFlux';
+    font-size: 26px;
+    font-weight: 700;
+    color: #FFF;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    text-align: left;
+    opacity: .9;
+}
+
+
+
+#owl-demo-mobile .slider-inner p {
+    font-family: 'Courier Prime';
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 0;
+    color: #FFF;
+    opacity: .85;
+}
+
+
+
+#owl-demo-mobile .owl-dots .owl-dot span {
+    width: 24px !important;
+    height: 1px !important;
+    margin: 0px !important;
+    margin-right: 10px !important;
+    border-radius: 30px !important;
+}
+
+#owl-demo-mobile .owl-dots .owl-dot:first-child {
+    margin-left: 0;
+}
+
+#owl-demo-mobile .owl-dots .owl-dot span::before {
+    content: '';
+    padding: 15px 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -772,6 +902,12 @@ html {
     }
 }
 
+@media (max-width: 1136px) {
+    .carousel-inner-wrapper {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1080px) {
     .nav-bar a {
         font-size: 13px;
@@ -781,9 +917,7 @@ html {
 
 
 @media (max-width: 1024px) {
-    .carousel-inner-wrapper {
-        width: 100%;
-    }
+
 
     .item .panel-heading,
     .item .panel-description,
@@ -799,16 +933,16 @@ html {
         top: 63.5%;
         opacity: 1 !important;
     }
-/* 
+
     #carousel-desktop {
         display: none !important;
     }
 
     #carousel-mobile {
         display: block !important;
-    } */
+    }
 
-   
+
 }
 
 
@@ -866,7 +1000,7 @@ html {
     }
 
 
-    
+
 
 
 }
@@ -926,6 +1060,22 @@ html {
         height: 15px;
     }
 
+    .carousel-slider .slider-item {
+        height: calc(100vh - 90px);
+    }
+
+
+    #owl-demo-mobile .owl-dots {
+        position: absolute;
+        top: unset;
+        bottom: 140px;
+        padding: 0 2em;
+        margin-top: 0;
+        display: flex;
+    }
+
+
+
 
 
 
@@ -942,7 +1092,7 @@ html {
     .panel-content {
         opacity: .95;
     }
-    
+
     .panel-description {
         opacity: 0.8;
     }
