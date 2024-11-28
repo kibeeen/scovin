@@ -18,14 +18,33 @@ window.addEventListener('resize', adjustLogoWidth);
 function adjustLogoWidth() {
     const logo = document.querySelector('.logo');
     const nav_expand_section = document.querySelector('.nav-expand-section');
+    const slider_video = document.querySelector('.slider-video');
+    const navbar = document.querySelector('#header');
+    const notifications = document.querySelector('#notifications');
 
+    // Safely calculate header height
+    const navbarHeight = navbar ? navbar.offsetHeight : 0;
+    const notificationsHeight = notifications ? notifications.offsetHeight : 0;
+    const headerHeight = navbarHeight + notificationsHeight;
 
-
+    // Get window width
     const windowWidth = window.innerWidth;
 
-    nav_expand_section.style.width = `${windowWidth}px`;
 
-    if (windowWidth <= 767) {
+
+    // Adjust nav-expand-section width
+    if (nav_expand_section) {
+        nav_expand_section.style.width = `${windowWidth}px`;
+    }
+
+    // Adjust logo width and slider height for smaller screens
+    if (windowWidth <= 480) {
+        if (logo) {
+            logo.style.width = `${windowWidth - 140}px`;
+        }
+
+
+    } else if (windowWidth <= 767) {
 
         // Apply the width to the logo
         logo.style.width = `${windowWidth - 140}px`;
@@ -148,13 +167,54 @@ $(document).ready(function () {
 
 
 
-    $(document).ready(function () {
-        $("#owl-demo-mobile").owlCarousel({
-            items: 1,
-            dots: true,
-            autoplay: false,
-            loop: true,
-            video: true,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
+
+
+$(document).ready(function () {
+    $("#owl-demo-mobile").owlCarousel({
+        items: 1,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        loop: true,
+        video: true,
+    });
+
+
+    // Add event listener for each video
+    $(".slide-video").each(function () {
+        const video = this; // Reference to the current video element
+        video.addEventListener("ended", function () {
+            // Move to the next slide after the video ends
+            $("#owl-demo-mobile").trigger("next.owl.carousel");
+        });
+    });
+
+    // Optional: Pause videos when the slide is not active
+    $("#owl-demo-mobile").on("changed.owl.carousel", function (event) {
+        const currentIndex = event.item.index;
+        $(".slide-video").each(function (index, video) {
+            if (index === currentIndex) {
+                video.play(); // Play the video in the active slide
+            } else {
+                video.pause(); // Pause all other videos
+                video.currentTime = 0; // Reset to the beginning
+            }
         });
     });
 
@@ -162,14 +222,9 @@ $(document).ready(function () {
     // Listen to owl events
 
 
-    // Trigger the initial background setup
-    owl.trigger('changed.owl.carousel', { item: { index: 0 } });
 
 
 });
-
-
-
 
 // $(document).ready(function () {
 //     $(document).ready(function () {

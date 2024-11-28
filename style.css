@@ -113,7 +113,7 @@ html {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .hidden {
@@ -703,10 +703,11 @@ html {
 #carousel-mobile {
     position: relative;
     display: none;
+    height: calc(100vh - 90px);
 }
 
 #carousel-mobile .carousel-slider {
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
@@ -746,13 +747,15 @@ html {
 #owl-demo-mobile .slider-background video {
     position: absolute;
     top: 0;
-    height: 100%;
     width: 100%;
     object-fit: cover;
     z-index: 1;
     left: 50%;
     transform: translateX(-50%);
+    height: 100vh;
 }
+
+
 
 #owl-demo-mobile .slider-background img {
     position: absolute;
@@ -764,6 +767,8 @@ html {
     left: 50%;
     transform: translateX(-50%);
 }
+
+
 
 #owl-demo-mobile .slider-inner {
     padding: 0 2em;
@@ -1074,9 +1079,7 @@ html {
         height: 15px;
     }
 
-    .carousel-slider .slider-item {
-        height: calc(100vh - 90px);
-    }
+
 
 
     #owl-demo-mobile .owl-dots {
@@ -1126,11 +1129,11 @@ html {
     }
 
     .carousel-slider .slider-item a {
-        margin-bottom: 130px;
+        margin-bottom: 120px;
     }
 
     #owl-demo-mobile .owl-dots {
-        bottom: 200px;
+        bottom: 130px;
     }
 }
 
